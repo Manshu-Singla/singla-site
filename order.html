@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Singla Mittal Bhandar - Order Now</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ============================================= -->
+    <!-- IMPORTANT: Change these for each new post/product -->
+    <!-- ============================================= -->
+
+    <!-- Facebook / WhatsApp Link Preview Tags -->
+    <meta property="og:title" content="Fresh Mithai Available - Order Now on WhatsApp!">
+    <meta property="og:description" content="Click to chat with us on WhatsApp and place your order directly.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://singla-site.pages.dev/order.html">
+
+    <!-- CHANGE THIS to the specific product image you want shown on Facebook -->
+    <meta property="og:image" content="https://singla-site.pages.dev/img/laddu.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Singla Mittal Bhandar Sweets">
+    <meta property="og:site_name" content="Singla Mittal Bhandar">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #fff8e7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .box {
+            max-width: 400px;
+        }
+        h2 {
+            color: #d35400;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #555;
+            margin-bottom: 25px;
+        }
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #25D366;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        a.manual-link {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="spinner"></div>
+        <h2>Redirecting to WhatsApp...</h2>
+        <p>Aap WhatsApp par redirect ho rahe hain. Agar automatically na khule, neeche button dabayein.</p>
+        <a class="manual-link" id="waLink" href="#">Chat on WhatsApp</a>
+    </div>
+
+    <script>
+        // ============================================
+        // CHANGE the number and message here
+        // ============================================
+        const phoneNumber = "919417664246"; // country code + number, no + or spaces
+        const message = "Hi, mujhe mithai order karni hai";
+
+        const waURL = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+
+        document.getElementById("waLink").href = waURL;
+
+        // Auto redirect after a short delay
+        setTimeout(function () {
+            window.location.href = waURL;
+        }, 800);
+    </script>
+</body>
+</html>
